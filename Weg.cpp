@@ -37,6 +37,8 @@ void Weg::vSimulieren()
 	// Apply any pending changes to the list before simulation starts
 	p_pFahrzeuge.vAktualisieren();
 
+	p_dSchranke = p_dLaenge;
+
 	for (auto& pFahrzeug : p_pFahrzeuge)
 	{
 		// exceptions reduce complexity
