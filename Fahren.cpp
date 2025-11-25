@@ -39,7 +39,7 @@ double Fahren::dStrecke(Fahrzeug& aFzg, double dZeitIntervall)
 
 	if (p_rWeg.getUeberholverbot())
 	{
-		double dFahrzeugAmVorne = p_rWeg.getSchranke();
+		double dFahrzeugAmVorne = p_rWeg.getSchranke() - aFzg.getAbschnittStrecke();
 		return(std::min({dMoeglich, dRest, dFahrzeugAmVorne}));
 	}
 
